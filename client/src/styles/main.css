@@ -1,0 +1,21 @@
+/* src/styles/main.css */
+/* Simple mobile-friendly styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  div {
+    padding: 1em;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  /* Responsive layout example */
+  @media (max-width: 600px) {
+    div {
+      padding: 0.5em;
+    }
+  }

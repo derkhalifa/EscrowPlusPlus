@@ -1,0 +1,23 @@
+{
+    "name": "escrow-plus-plus",
+    "version": "1.0.0",
+    "description": "A 4-player online card game",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "concurrently \"npm run server\" \"npm run client\"",
+      "server": "cd server && nodemon server.js",
+      "client": "cd client && npm start",
+      "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+      "build": "cd client && npm run build",
+      "test": "echo \"No tests configured\" && exit 1"
+    },
+    "dependencies": {
+      "concurrently": "^8.2.1"
+    },
+    "devDependencies": {},
+    "engines": {
+      "node": ">=16.0.0"
+    },
+    "author": "Your Name",
+    "license": "MIT"
+  }
