@@ -1,3 +1,7 @@
+#!/bin/bash
+
+# Create .env file
+cat > ./server/.env << 'EOL'
 # Database
 MONGO_URI=mongodb+srv://derkhalifa:UPx3RAtFdJJ3F3ix@cluster0.8o1uj.mongodb.net/cardgame
 
@@ -18,3 +22,13 @@ EMAIL_PORT=2525
 EMAIL_USERNAME=1d0f0da472a160
 EMAIL_PASSWORD=66942246d2f046
 EMAIL_FROM=noreply@escrowplusplus.com
+EOL
+
+echo ".env file created in server directory"
+
+# Create .env file for client (if needed)
+cat > ./client/.env << 'EOL'
+REACT_APP_API_URL=http://localhost:5000
+EOL
+
+echo ".env file created in client directory"
