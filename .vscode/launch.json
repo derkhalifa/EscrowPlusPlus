@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Debug Server",
+        "skipFiles": ["<node_internals>/**"],
+        "program": "${workspaceFolder}/server/server.js",
+        "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/nodemon",
+        "runtimeArgs": ["--inspect"],
+        "restart": true,
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "env": {
+          "NODE_ENV": "development"
+        }
+      }
+    ],
+    "compounds": [
+      {
+        "name": "Server + Client",
+        "configurations": ["Debug Server"],
+        "preLaunchTask": "start-client"
+      }
+    ]
+  }
