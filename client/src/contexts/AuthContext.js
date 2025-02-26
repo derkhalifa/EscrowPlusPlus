@@ -58,7 +58,13 @@ export const AuthProvider = ({ children }) => {
   const register = async (userData) => {
     const response = await axios.post(
       `${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/api/auth/register`,
-      userData
+      userData,
+      { 
+        withCredentials: true,  // Important for CORS with credentials
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
     );
     
     return response.data;

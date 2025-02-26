@@ -53,6 +53,12 @@ const Register = () => {
           username,
           email,
           password
+        },
+        { 
+          withCredentials: true,  // Important for CORS with credentials
+          headers: {
+            'Content-Type': 'application/json'
+          }
         }
       );
       
