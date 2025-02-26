@@ -3,7 +3,7 @@
 # Create .env file
 cat > ./server/.env << 'EOL'
 # Database
-MONGO_URI=mongodb+srv://derkhalifa:UPx3RAtFdJJ3F3ix@cluster0.8o1uj.mongodb.net/cardgame
+## MONGO_URI=set by environment
 
 # JWT Config
 JWT_SECRET=superSecretKey123ForEscrowPlusPlusDev
